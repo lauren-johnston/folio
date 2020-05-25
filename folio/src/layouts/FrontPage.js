@@ -40,7 +40,11 @@ const useStyles = makeStyles((theme) => ({
   cardMedia: {
     color: "#3f51b5",
     paddingTop: '65%', // 16:9
-    opacity: 0.9,
+    opacity: .85,
+
+    "&:hover": {
+      opacity: 0.6,
+    }
   },
   cardContent: {
     padding: theme.spacing(2, 0, 1),
@@ -138,7 +142,6 @@ function FrontPage() {
                   <CardMedia
                     className={classes.cardMedia}
                     image={card.img}
-                    title={card.img}
                   />
                   </Link>
                   <Box className={classes.cardContent}>
