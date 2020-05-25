@@ -9,13 +9,17 @@ import * as serviceWorker from './serviceWorker';
 const theme = createMuiTheme({
   typography: {
     fontFamily: [
-      'Work Sans',
+      'Muli',
       '"Helvetica Neue"',
       'Arial',
       'sans-serif'
     ].join(','),
+    h4: {
+      "fontWeight": 500,
+    },
   }
 });
+
 
 ReactDOM.render(
   <React.StrictMode>
