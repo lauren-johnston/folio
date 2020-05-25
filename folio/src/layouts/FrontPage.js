@@ -1,17 +1,15 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Card from '@material-ui/core/Card';
-import Avatar from '@material-ui/core/Avatar';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import Toolbar from '@material-ui/core/Toolbar';
+import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles, withTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Footer from './components/Footer';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -31,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(4),
   },
   cardGrid: {
-    paddingTop: theme.spacing(8),
+    paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(8),
   },
   card: {
@@ -45,9 +43,14 @@ const useStyles = makeStyles((theme) => ({
   cardContent: {
     flexGrow: 1,
   },
+  dividerMed: {
+    width: "30%",
+    margin: "auto",
+  },
+
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = [1, 2, 3, 4];
 
 // Adapted from: https://github.com/mui-org/material-ui/blob/master/docs/src/pages/getting-started/templates/album/Album.js
 
@@ -61,22 +64,21 @@ function FrontPage() {
         {/* Hero unit */}
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
-            <Avatar>LJ</Avatar>
             <Typography component="h1" variant="h4" align="center" color="textPrimary" gutterBottom>
               Lauren Johnston
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              I'm a full stack software engineer and former computer science major at Princeton. Currently working on promoting fair representation at Representable.org.  
+            I'm a software engineer interested in creating tech that has a tangible impact on communities. I have full-stack development experience as well as experience building and optimizing data pipelines and ML (Pytorch + Tensorflow) model training.  
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <IconButton variant="contained" color="primary">
+                  <IconButton variant="contained" color="primary" href="https://www.linkedin.com/in/laurenjohnston9/">
                     <LinkedInIcon></LinkedInIcon>
                   </IconButton>
                 </Grid>
                 <Grid item>
-                  <IconButton variant="contained" color="primary">
+                  <IconButton variant="contained" color="primary" href="https://github.com/lauren-johnston">
                     <GitHubIcon></GitHubIcon>
                   </IconButton>
                 </Grid>
@@ -85,7 +87,11 @@ function FrontPage() {
           </Container>
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
-          {/* End hero unit */}
+        <Typography variant="h5" align="center" color="textPrimary" gutterBottom>
+                Projects
+          </Typography>
+          <Divider className={classes.dividerMed} light />
+          <br></br>
           <Grid container spacing={4}>
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={6}>
