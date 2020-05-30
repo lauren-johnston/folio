@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-// TODO: load data in separately
+// TODO: improve modularity by loading data in separately
 const cards = [
   {
     title: "Representable.org",
@@ -83,18 +83,19 @@ const cards = [
     description: "Piloted a drone over NJ farm fields to collect aerial images and infrared data and identify areas with poor crop health. Trained a CNN in Pytorch to classify crop disease from aerial images. Paper selected as an example for future students on Princeton computer science website.",
     img: "img/crop.JPG",
   },
-  {
-    title: "Nassau Weekly",
-    link: "http://nassauweekly.com/",
-    description: "Redesigned the Nassau Weekly website in 2017 and overhauled non-responsive, legacy site. Integrated AdSense and generated online ad revenue to combat declining print ad sales.",
-    img: "img/nass.png",
-  },
-  {
-    title: "Solar Flare Detection",
-    link: "flare_research.pdf",
-    description: "Built a VLF monitoring station and performed data analysis in Python to investigate solar flare damage by latitude from over 100 global SID monitors. Research presented at 2015 Congress on Polar Meteorology and Oceanography.",
-    img: "img/flares.png",
-  }
+  // 
+  // {
+  //   title: "Nassau Weekly",
+  //   link: "http://nassauweekly.com/",
+  //   description: "Redesigned the Nassau Weekly website in 2017 and overhauled non-responsive, legacy site. Integrated AdSense and generated online ad revenue to combat declining print ad sales.",
+  //   img: "img/nass.png",
+  // },
+  // {
+  //   title: "Solar Flare Detection",
+  //   link: "flare_research.pdf",
+  //   description: "Built a VLF monitoring station and performed data analysis in Python to investigate solar flare damage by latitude from over 100 global SID monitors. Research presented at 2015 Congress on Polar Meteorology and Oceanography.",
+  //   img: "img/flares.png",
+  // }
 ];
 
 // Adapted from: https://github.com/mui-org/material-ui/blob/master/docs/src/pages/getting-started/templates/album/Album.js
