@@ -110,7 +110,7 @@ function FrontPage() {
         <div className={classes.heroContent}>
           <Container maxWidth="md">
             <Typography component="h1" variant="h4" align="center" color="textPrimary" gutterBottom>
-              Hi, I'm Lauren &#8212; a software engineer interested in creating tech that will transform the way people work and live in a positive way. I'm currently a full-stack software engineer at Nuna.
+              Hi, I'm Lauren &#8212; a software engineer currently working at Nuna. I'm passionate about creating technology that will revolutionize the way people live and work.
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
